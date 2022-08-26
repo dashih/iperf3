@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  iperf3:
+    container_name: iperf3
+    image: dannyshih/iperf3:v3.9
+    network_mode: bridge
+    restart: unless-stopped
+    ports:
+      - 5201:5201
