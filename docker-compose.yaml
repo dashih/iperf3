@@ -1,9 +1,9 @@
-version: '3.8'
-
 services:
   iperf3:
+    image: registry.internal.dannyshih.net:5000/iperf3:v3.16
     container_name: iperf3
-    image: dannyshih/iperf3:v3.9
+    build: .
+    platform: linux/amd64
     network_mode: bridge
     restart: unless-stopped
     ports:
